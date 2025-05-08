@@ -1,3 +1,7 @@
+## IMPORTANT: be in the working dictionary for launching prometheus
++ create a keys.py including the var load_API_KEY = "your API Key"
+
+
 # Python/Flask
 python wheather_exporter.py -> runs on http://localhost:8000/metrics
 # Prometheus

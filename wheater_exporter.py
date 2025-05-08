@@ -1,8 +1,8 @@
 
 from http.server import HTTPServer, BaseHTTPRequestHandler
 import requests
-
-API_KEY = "b402ac607e53c81823d1bc9233314efa"
+from keys import load_API_KEY
+API_KEY = load_API_KEY
 CITIES = ["Berlin,de", "Ingolstadt,de", "Hamburg,de","Koeln,de"]
 
 def generate_metrics():
