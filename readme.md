@@ -1,5 +1,11 @@
+cd co# NEW: 
+### Launch the all in one Docker including starting the eyporter, prometheus and grafana -> still testing (try restarting device)
+## use docker compose up
+
+--------------------------------------------------------------------
+
 ## IMPORTANT: be in the working dictionary for launching prometheus
-+ create a keys.py including the var load_API_KEY = "your API Key"
++ create a keys.py including the var load_API_KEY = "your API Keygit"
 
 
 # Python/Flask

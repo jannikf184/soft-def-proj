@@ -1,0 +1,12 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Kopiere alle notwendigen Dateien
+COPY . /app
+
+# Installiere die Dependencies
+RUN pip install --no-cache-dir requests
+
+# Exporter starten
+CMD ["python", "exporter.py"]

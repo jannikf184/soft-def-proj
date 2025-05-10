@@ -1,7 +1,7 @@
 
 from http.server import HTTPServer, BaseHTTPRequestHandler
-import requests
 from keys import load_API_KEY
+import requests
 API_KEY = load_API_KEY
 CITIES = ["Berlin,de", "Ingolstadt,de", "Hamburg,de","Koeln,de"]
 
