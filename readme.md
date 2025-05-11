@@ -30,5 +30,11 @@ brew services start grafana -> Runs on http://localhost:3000
 pw in passwords name admin
 
 
+#Flask app
+
+not part of the docker yet(not working) -> start in IDE
+if starting from docker be sure to change host in get_data.py
+
+
 
 

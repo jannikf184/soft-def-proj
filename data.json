@@ -1,5 +1,113 @@
 [
     {
+        "Berlin,de": "17.31",
+        "Ingolstadt,de": "20.6",
+        "Hamburg,de": "19.14",
+        "Koeln,de": "24.12"
+    },
+    {
+        "timestamp": "2025-05-11 14:05:14"
+    },
+    {
+        "Berlin,de": "17.31",
+        "Ingolstadt,de": "20.47",
+        "Hamburg,de": "18.88",
+        "Koeln,de": "23.83"
+    },
+    {
+        "timestamp": "2025-05-11 14:00:15"
+    },
+    {
+        "Berlin,de": "17.95",
+        "Ingolstadt,de": "20.27",
+        "Hamburg,de": "18.88",
+        "Koeln,de": "23.83"
+    },
+    {
+        "timestamp": "2025-05-11 13:55:44"
+    },
+    {
+        "Berlin,de": "17.67",
+        "Ingolstadt,de": "20.27",
+        "Hamburg,de": "18.88",
+        "Koeln,de": "23.83"
+    },
+    {
+        "timestamp": "2025-05-11 13:55:14"
+    },
+    {
+        "Berlin,de": "17.67",
+        "Ingolstadt,de": "20.27",
+        "Hamburg,de": "18.87",
+        "Koeln,de": "24.12"
+    },
+    {
+        "timestamp": "2025-05-11 13:50:14"
+    },
+    {
+        "Berlin,de": "17.47",
+        "Ingolstadt,de": "20.27",
+        "Hamburg,de": "18.87",
+        "Koeln,de": "24.12"
+    },
+    {
+        "timestamp": "2025-05-11 13:48:14"
+    },
+    {
+        "Berlin,de": "17.66",
+        "Ingolstadt,de": "20.27",
+        "Hamburg,de": "18.87",
+        "Koeln,de": "24.12"
+    },
+    {
+        "timestamp": "2025-05-11 13:45:41"
+    },
+    {
+        "Berlin,de": "17.64",
+        "Ingolstadt,de": "20.27",
+        "Hamburg,de": "18.59",
+        "Koeln,de": "24.12"
+    },
+    {
+        "timestamp": "2025-05-11 13:45:11"
+    },
+    {
+        "Berlin,de": "17.64",
+        "Ingolstadt,de": "19.97",
+        "Hamburg,de": "18.59",
+        "Koeln,de": "24.04"
+    },
+    {
+        "timestamp": "2025-05-11 13:43:11"
+    },
+    {
+        "Berlin,de": "17.41",
+        "Ingolstadt,de": "19.97",
+        "Hamburg,de": "18.59",
+        "Koeln,de": "24.04"
+    },
+    {
+        "timestamp": "2025-05-11 13:40:41"
+    },
+    {
+        "Berlin,de": "17.46",
+        "Ingolstadt,de": "19.97",
+        "Hamburg,de": "18.59",
+        "Koeln,de": "24.04"
+    },
+    {
+        "timestamp": "2025-05-11 13:40:11"
+    },
+    {
+        "Berlin,de": "17.46",
+        "Ingolstadt,de": "19.39",
+        "Hamburg,de": "18.59",
+        "Koeln,de": "24.02"
+    },
+    {
+        "timestamp": "2025-05-11 13:38:11"
+    },
+    {
         "Berlin,de": "10.48",
         "Ingolstadt,de": "8.56",
         "Hamburg,de": "11.91",

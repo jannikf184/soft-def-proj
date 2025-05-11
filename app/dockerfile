@@ -1,0 +1,15 @@
+
+FROM python:3.9-slim
+
+WORKDIR /app
+#ENV PYTHONPATH=/app/..
+# Abhängigkeiten installieren (falls vorhanden)
+COPY requirements.txt .
+RUN pip install --no-cache-dir requests
+RUN pip install -r requirements.txt
+
+# Die Python-Datei kopieren
+COPY . .
+
+# Start der Python-Datei
+CMD ["python", "/app/app.py"]  # Die Python-Datei wird hier ausgeführt
