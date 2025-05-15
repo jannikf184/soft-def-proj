@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Auswertung</title>
+</head>
+<body>
+    <h1>Ausgewählte Plots</h1>
+    {% for g in graphs %}
+            <h1>{{g[0]}}</h1>
+        <img src="data:image/png;base64,{{ g[1] }}" alt="Plot {{ loop.index }}">
+    {% endfor %}
+    <br>
+    <a href="/">Zurück</a>
+</body>
+</html>

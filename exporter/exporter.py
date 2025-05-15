@@ -34,8 +34,13 @@ def generate_metrics():
                 timestamp = entry["dt"]
                 hour = time.strftime("%Y-%m-%dT%H:00:00Z", time.gmtime(timestamp))
                 main = entry["main"]
+                wind = entry.get("wind", {})
                 city_label = f'city="{city}",hour="{hour}"'
-                metrics += f'weather_temperature{{{city_label}}} {main["temp"]}\n'
+                metrics += (
+                    f'weather_temperature{{{city_label}}} {main["temp"]}\n'
+                    f'weather_humidity{{{city_label}}} {main["humidity"]}\n'
+                    f'weather_pressure{{{city_label}}} {main["pressure"]}\n'
+                    f'weather_wind_speed{{{city_label}}} {wind.get("speed", 0)}\n')
 
         except Exception as e:
             metrics += f"# ERROR fetching data for {city}: {e}\n"

@@ -15,10 +15,18 @@ def plot_to_html_image(plt):
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    data = DataObject("weather_temperature")
-    plt = data.plot_data()
-    graph_html = plot_to_html_image(plt)
-    return render_template('index.html',graph_html=graph_html)
+    return render_template('index.html')
+@app.route('/auswertung', methods=['POST'])
+def auswertung():
+    variables = request.form.getlist('option')
+    graphs = []
+    for variable in variables:
+        session = DataObject(variable)
+        plot = session.plot_data()
+        plot_png = plot_to_html_image(plot)
+        graphs.append([variable,plot_png])
+
+    return render_template("auswertung.html",graphs=graphs)
 
 if __name__ == '__main__':
     app.run(debug=True)
