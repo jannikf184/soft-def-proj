@@ -1,8 +1,5 @@
-import json
 
 import requests
-import time
-from datetime import datetime
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -13,7 +10,7 @@ class DataObject():
         self.data = self.get_prometheus_data()  # Daten holen
 
     def get_prometheus_data(self):
-        host = "localhost" #localhost from ide prometheus from docker
+        host = "prometheus" #localhost from ide prometheus from docker
         url = f"http://{host}:9090/api/v1/query" #from docker
         params = {"query": self.query}
         response = requests.get(url, params=params)

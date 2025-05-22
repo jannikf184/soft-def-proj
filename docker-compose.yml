@@ -14,15 +14,15 @@ services:
     volumes:
       - ./exporter:/app  # Falls du dort auch live entwickeln willst
 
-  python-container:
+  flask:
     build:
       context: ./app
       dockerfile: Dockerfile
     volumes:
-      - ./app:/app  # ← Live-Mount vom Host in den Container
+      - ./app:/app
     working_dir: /app
-    command: ["python", "app.py"]  # Kein fixer Pfad, da wir im /app arbeiten
-    #ports:
-     # - "5001:5000"  # Optional, falls deine App Flask o. ä. ist
+    command: ["python", "app.py"]
+    ports:
+      - "5001:5000"
     environment:
       - PYTHONUNBUFFERED=1

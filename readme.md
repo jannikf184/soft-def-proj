@@ -1,4 +1,5 @@
-cd co# NEW: 
+#
+NEW: 
 ### Launch the all in one Docker including starting the eyporter, prometheus and grafana -> still testing (try restarting device)
 ## use docker compose up
 
