@@ -58,6 +58,7 @@ class PrometheusHandler(BaseHTTPRequestHandler):
             self.send_response(404)
             self.end_headers()
 
+
 if __name__ == "__main__":
     server = HTTPServer(('0.0.0.0', 8000), PrometheusHandler)
     print("Exporter läuft auf http://localhost:8000/metrics")
