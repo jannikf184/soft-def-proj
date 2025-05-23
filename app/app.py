@@ -26,7 +26,7 @@ def auswertung():
 
     return render_template("auswertung.html",graphs=graphs)
 
-@app.route('/map', methods=['POST'])
+@app.route('/map', methods=['GET', 'POST'])
 def mapping():
     weather_data = [
         {"city": "Köln", "lat": 50.9333, "lon": 6.9500, "temperature": 12},

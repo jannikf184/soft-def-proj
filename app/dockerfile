@@ -3,6 +3,27 @@ FROM python:3.9-slim
 
 WORKDIR /app
 
+RUN apt-get update && apt-get install -y \
+    gcc \
+    g++ \
+    libproj-dev \
+    proj-data \
+    proj-bin \
+    libgeos-dev \
+    libgeos++-dev \
+    libgdal-dev \
+    gdal-bin \
+    python3-dev \
+    build-essential \
+    pkg-config \
+    libpng-dev \
+    libjpeg-dev \
+    libfreetype6-dev \
+    libatlas-base-dev \
+    liblapack-dev \
+    libblas-dev \
+    && rm -rf /var/lib/apt/lists/*
+
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
