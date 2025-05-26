@@ -2,15 +2,18 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 from keys import *
 import time
 import requests
-
+import json
+import sys
+sys.path.append('../map')
 API_KEY = load_API_KEY
-CITIES = {
-    "Ingolstadt,de": (48.7656, 11.4237),
-}
+
+with open ("../map/staedte_koordinaten.json","r") as f:
+    cities = json.load(f)
+
 
 def fetch_history(lat, lon,k):
-    end = int(time.time()) - k*86400
-    start = end - (k+1)*86400
+    end = int(time.time()) - k*3600
+    start = end - (k+1)*3600
     url = (
         f"https://history.openweathermap.org/data/2.5/history/city"
         f"?lat={lat}&lon={lon}&type=hour&start={start}&end={end}&appid={API_KEY}&units=metric"
@@ -21,10 +24,12 @@ def fetch_history(lat, lon,k):
 
 def generate_metrics():
     metrics = ""
-    for city, (lat, lon) in CITIES.items():
+    for city in cities:
+        lat = city["lat"]
+        lon = city["lon"]
         try:
             entries = []
-            for k in range(0, 8):
+            for k in range(0, 1):
                 hourly_data = fetch_history(lat, lon, k)
                 entries.extend(hourly_data)
 
@@ -38,9 +43,9 @@ def generate_metrics():
                 city_label = f'city="{city}",hour="{hour}"'
                 metrics += (
                     f'weather_temperature{{{city_label}}} {main["temp"]}\n'
-                    f'weather_humidity{{{city_label}}} {main["humidity"]}\n'
-                    f'weather_pressure{{{city_label}}} {main["pressure"]}\n'
-                    f'weather_wind_speed{{{city_label}}} {wind.get("speed", 0)}\n')
+                    f'weather_wind_speed{{{city_label}}} {wind.get("speed", 0)}\n'
+                    f'weather_wind_speed{{{city_label}}} {wind.get("deg", 0)}\n'
+                )
 
         except Exception as e:
             metrics += f"# ERROR fetching data for {city}: {e}\n"
