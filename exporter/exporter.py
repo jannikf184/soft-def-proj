@@ -7,7 +7,7 @@ import sys
 sys.path.append('../map')
 API_KEY = load_API_KEY
 
-with open ("../map/staedte_koordinaten.json","r") as f:
+with open ("staedte_koordinaten.json") as f:
     cities = json.load(f)
 
 

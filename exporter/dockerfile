@@ -4,7 +4,6 @@ WORKDIR /app
 #ENV PYTHONPATH=/app/..
 # Kopiere alle notwendigen Dateien
 COPY . /app
-COPY ./map
 
 # Installiere die Dependencies
 RUN pip install --no-cache-dir requests
