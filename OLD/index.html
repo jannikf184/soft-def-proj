@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Wetter-Plot</title>
+        <style>
+        .checkbox-container {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="/auswertung" method="post">
+        <div class="checkbox-container">
+            <label><input type="checkbox" name="option" value="weather_temperature"> weather_temperature</label>
+            <label><input type="checkbox" name="option" value="weather_humidity"> weather_humidity</label>
+            <label><input type="checkbox" name="option" value="weather_pressure"> weather_pressure</label>
+            <label><input type="checkbox" name="option" value="weather_wind_speed"> weather_wind_speed</label>
+        </div>
+        <button type="submit">generate</button>
+    </form>
+
+
+
+</body>
+</html>

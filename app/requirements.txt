@@ -1,6 +1,6 @@
-cartopy
+requests
+folium
 prometheus_client
-pandas
-matplotlib
 flask
 requests
+Shapely

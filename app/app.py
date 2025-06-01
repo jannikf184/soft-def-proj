@@ -1,12 +1,12 @@
-from get_data import DataObject
 from flask import Flask, render_template, request
-from ja import *
+from map_genarator import *
 import io
 import base64
 app = Flask(__name__)
 
-erstelle_karte(original_autobahn_abschnitte_definition, "originalrichtung", ist_gegenrichtung_flag=False)
-erstelle_karte(gegenrichtung_definition, "gegenrichtung_option1", ist_gegenrichtung_flag=True)
+def refresh_maps():
+    erstelle_karte(original_autobahn_abschnitte_definition, "originalrichtung", ist_gegenrichtung_flag=False)
+    erstelle_karte(gegenrichtung_definition, "gegenrichtung_option1", ist_gegenrichtung_flag=True)
 
 
 def plot_to_html_image(plt):
@@ -18,24 +18,16 @@ def plot_to_html_image(plt):
 @app.route('/', methods=['GET', 'POST'])
 def index():
     return render_template('index.html')
-@app.route('/auswertung', methods=['POST'])
-def auswertung():
-    variables = request.form.getlist('option')
-    graphs = []
-    for variable in variables:
-        session = DataObject(variable)
-        plot = session.plot_data()
-        plot_png = plot_to_html_image(plot)
-        graphs.append([variable,plot_png])
 
-    return render_template("auswertung.html",graphs=graphs)
 
-@app.route('/map', methods=['GET', 'POST'])
+@app.route('/map1', methods=['GET', 'POST'])
 def show_map():
+    refresh_maps()
     return render_template("autobahn_wetter_originalrichtung.html")
 
-@app.route('/map_gegen', methods=['GET', 'POST'])
+@app.route('/map2', methods=['GET', 'POST'])
 def show_map_gegen():
+    refresh_maps()
     return render_template("autobahn_wetter_gegenrichtung_option1.html")
 
 if __name__ == '__main__':

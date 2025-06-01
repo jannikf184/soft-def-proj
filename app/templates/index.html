@@ -2,28 +2,33 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Wetter-Plot</title>
-        <style>
-        .checkbox-container {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 20px;
+    <title>Startseite</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
         }
-
+        button {
+            padding: 15px 30px;
+            margin: 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-    <form action="/auswertung" method="post">
-        <div class="checkbox-container">
-            <label><input type="checkbox" name="option" value="weather_temperature"> weather_temperature</label>
-            <label><input type="checkbox" name="option" value="weather_humidity"> weather_humidity</label>
-            <label><input type="checkbox" name="option" value="weather_pressure"> weather_pressure</label>
-            <label><input type="checkbox" name="option" value="weather_wind_speed"> weather_wind_speed</label>
-        </div>
-        <button type="submit">generate</button>
+
+    <h1>Karte zur live Analyse von Kraftstoffverbrauch</h1>
+    <p>Wähle eine Richtung(Hauptrichtung: Nord-Süd,Ost-West / Gegenrichtung: Süd-Nord,West-Ost):</p>
+
+    <form action="{{ url_for('show_map') }}" method="get">
+        <button type="submit">Zur Karte für die Hauptrichtung</button>
     </form>
 
-
+    <form action="{{ url_for('show_map_gegen') }}" method="get">
+        <button type="submit">Zur Karte für die Gegenrichtung</button>
+    </form>
 
 </body>
 </html>
