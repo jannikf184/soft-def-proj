@@ -1,0 +1,386 @@
+{
+    "Hamburg": {
+        "dt": 1748771899,
+        "main": {
+            "temp": 21.8,
+            "pressure": 1011.0,
+            "humidity": 69.0,
+            "feels_like": 21.84,
+            "temp_min": 20.48,
+            "temp_max": 22.92
+        },
+        "wind": {
+            "speed": 4.63,
+            "deg": 190.0,
+            "gust": 0.0
+        }
+    },
+    "Bremen": {
+        "dt": 1748771899,
+        "main": {
+            "temp": 21.06,
+            "pressure": 1010.0,
+            "humidity": 84.0,
+            "feels_like": 21.41,
+            "temp_min": 20.89,
+            "temp_max": 21.71
+        },
+        "wind": {
+            "speed": 4.12,
+            "deg": 230.0,
+            "gust": 0.0
+        }
+    },
+    "W\u00fcrzburg": {
+        "dt": 1748771899,
+        "main": {
+            "temp": 22.22,
+            "pressure": 1016.0,
+            "humidity": 71.0,
+            "feels_like": 22.35,
+            "temp_min": 22.22,
+            "temp_max": 22.78
+        },
+        "wind": {
+            "speed": 4.09,
+            "deg": 212.0,
+            "gust": 5.32
+        }
+    },
+    "Dortmund": {
+        "dt": 1748771900,
+        "main": {
+            "temp": 20.02,
+            "pressure": 1014.0,
+            "humidity": 78.0,
+            "feels_like": 20.11,
+            "temp_min": 19.03,
+            "temp_max": 20.53
+        },
+        "wind": {
+            "speed": 3.09,
+            "deg": 240.0,
+            "gust": 0.0
+        }
+    },
+    "Ulm": {
+        "dt": 1748771900,
+        "main": {
+            "temp": 21.52,
+            "pressure": 1017.0,
+            "humidity": 75.0,
+            "feels_like": 21.69,
+            "temp_min": 19.34,
+            "temp_max": 21.94
+        },
+        "wind": {
+            "speed": 0.89,
+            "deg": 248.0,
+            "gust": 1.79
+        }
+    },
+    "Frankfurt": {
+        "dt": 1748771900,
+        "main": {
+            "temp": 21.97,
+            "pressure": 1015.0,
+            "humidity": 79.0,
+            "feels_like": 22.29,
+            "temp_min": 21.06,
+            "temp_max": 23.36
+        },
+        "wind": {
+            "speed": 3.6,
+            "deg": 140.0,
+            "gust": 0.0
+        }
+    },
+    "Flensburg": {
+        "dt": 1748771900,
+        "main": {
+            "temp": 19.81,
+            "pressure": 1009.0,
+            "humidity": 73.0,
+            "feels_like": 19.75,
+            "temp_min": 19.81,
+            "temp_max": 19.81
+        },
+        "wind": {
+            "speed": 6.69,
+            "deg": 180.0,
+            "gust": 0.0
+        }
+    },
+    "Magdeburg": {
+        "dt": 1748771900,
+        "main": {
+            "temp": 19.63,
+            "pressure": 1013.0,
+            "humidity": 83.0,
+            "feels_like": 19.82,
+            "temp_min": 19.63,
+            "temp_max": 21.7
+        },
+        "wind": {
+            "speed": 2.24,
+            "deg": 247.0,
+            "gust": 4.02
+        }
+    },
+    "Passau": {
+        "dt": 1748771900,
+        "main": {
+            "temp": 23.33,
+            "pressure": 1017.0,
+            "humidity": 75.0,
+            "feels_like": 23.68,
+            "temp_min": 22.6,
+            "temp_max": 26.76
+        },
+        "wind": {
+            "speed": 0.45,
+            "deg": 273.0,
+            "gust": 2.68
+        }
+    },
+    "Regensburg": {
+        "dt": 1748771901,
+        "main": {
+            "temp": 20.5,
+            "pressure": 1017.0,
+            "humidity": 73.0,
+            "feels_like": 20.51,
+            "temp_min": 20.5,
+            "temp_max": 20.5
+        },
+        "wind": {
+            "speed": 0.89,
+            "deg": 324.0,
+            "gust": 2.24
+        }
+    },
+    "Oberhausen": {
+        "dt": 1748771901,
+        "main": {
+            "temp": 19.83,
+            "pressure": 1014.0,
+            "humidity": 72.0,
+            "feels_like": 19.75,
+            "temp_min": 18.91,
+            "temp_max": 21.6
+        },
+        "wind": {
+            "speed": 1.79,
+            "deg": 196.0,
+            "gust": 2.24
+        }
+    },
+    "Berlin": {
+        "dt": 1748771901,
+        "main": {
+            "temp": 22.95,
+            "pressure": 1014.0,
+            "humidity": 70.0,
+            "feels_like": 23.13,
+            "temp_min": 21.59,
+            "temp_max": 23.95
+        },
+        "wind": {
+            "speed": 4.12,
+            "deg": 250.0,
+            "gust": 0.0
+        }
+    },
+    "M\u00fcnster": {
+        "dt": 1748771901,
+        "main": {
+            "temp": 22.7,
+            "pressure": 1012.0,
+            "humidity": 71.0,
+            "feels_like": 22.88,
+            "temp_min": 20.88,
+            "temp_max": 22.7
+        },
+        "wind": {
+            "speed": 5.66,
+            "deg": 220.0,
+            "gust": 0.0
+        }
+    },
+    "Ingolstadt": {
+        "dt": 1748771901,
+        "main": {
+            "temp": 20.6,
+            "pressure": 1017.0,
+            "humidity": 69.0,
+            "feels_like": 20.52,
+            "temp_min": 19.63,
+            "temp_max": 21.06
+        },
+        "wind": {
+            "speed": 3.09,
+            "deg": 250.0,
+            "gust": 0.0
+        }
+    },
+    "Kempten (Allg\u00e4u)": {
+        "dt": 1748771901,
+        "main": {
+            "temp": 19.73,
+            "pressure": 1017.0,
+            "humidity": 69.0,
+            "feels_like": 19.56,
+            "temp_min": 18.49,
+            "temp_max": 20.65
+        },
+        "wind": {
+            "speed": 3.44,
+            "deg": 256.0,
+            "gust": 7.16
+        }
+    },
+    "Nuremberg": {
+        "dt": 1748771901,
+        "main": {
+            "temp": 22.02,
+            "pressure": 1017.0,
+            "humidity": 62.0,
+            "feels_like": 21.9,
+            "temp_min": 21.73,
+            "temp_max": 22.38
+        },
+        "wind": {
+            "speed": 2.06,
+            "deg": 0.0,
+            "gust": 0.0
+        }
+    },
+    "Hanover": {
+        "dt": 1748771902,
+        "main": {
+            "temp": 22.04,
+            "pressure": 1013.0,
+            "humidity": 68.0,
+            "feels_like": 22.08,
+            "temp_min": 21.55,
+            "temp_max": 23.26
+        },
+        "wind": {
+            "speed": 6.17,
+            "deg": 230.0,
+            "gust": 0.0
+        }
+    },
+    "Munich": {
+        "dt": 1748771902,
+        "main": {
+            "temp": 20.61,
+            "pressure": 1018.0,
+            "humidity": 72.0,
+            "feels_like": 20.61,
+            "temp_min": 19.36,
+            "temp_max": 20.74
+        },
+        "wind": {
+            "speed": 0.89,
+            "deg": 241.0,
+            "gust": 2.68
+        }
+    },
+    "Leipzig": {
+        "dt": 1748771902,
+        "main": {
+            "temp": 20.06,
+            "pressure": 1015.0,
+            "humidity": 73.0,
+            "feels_like": 20.03,
+            "temp_min": 18.95,
+            "temp_max": 20.43
+        },
+        "wind": {
+            "speed": 4.12,
+            "deg": 190.0,
+            "gust": 0.0
+        }
+    },
+    "Cologne": {
+        "dt": 1748771902,
+        "main": {
+            "temp": 18.7,
+            "pressure": 1014.0,
+            "humidity": 88.0,
+            "feels_like": 18.92,
+            "temp_min": 17.92,
+            "temp_max": 19.42
+        },
+        "wind": {
+            "speed": 1.03,
+            "deg": 0.0,
+            "gust": 0.0
+        }
+    },
+    "Bayreuth": {
+        "dt": 1748771902,
+        "main": {
+            "temp": 20.26,
+            "pressure": 1016.0,
+            "humidity": 75.0,
+            "feels_like": 20.3,
+            "temp_min": 20.26,
+            "temp_max": 20.26
+        },
+        "wind": {
+            "speed": 1.81,
+            "deg": 104.0,
+            "gust": 2.92
+        }
+    },
+    "L\u00fcbeck": {
+        "dt": 1748771902,
+        "main": {
+            "temp": 21.97,
+            "pressure": 1011.0,
+            "humidity": 75.0,
+            "feels_like": 22.18,
+            "temp_min": 20.58,
+            "temp_max": 22.0
+        },
+        "wind": {
+            "speed": 4.63,
+            "deg": 170.0,
+            "gust": 0.0
+        }
+    },
+    "F\u00fcssen": {
+        "dt": 1748771903,
+        "main": {
+            "temp": 17.73,
+            "pressure": 1018.0,
+            "humidity": 69.0,
+            "feels_like": 17.36,
+            "temp_min": 17.73,
+            "temp_max": 17.73
+        },
+        "wind": {
+            "speed": 2.23,
+            "deg": 311.0,
+            "gust": 3.24
+        }
+    },
+    "Kassel": {
+        "dt": 1748771903,
+        "main": {
+            "temp": 21.72,
+            "pressure": 1014.0,
+            "humidity": 73.0,
+            "feels_like": 21.85,
+            "temp_min": 20.06,
+            "temp_max": 21.72
+        },
+        "wind": {
+            "speed": 4.12,
+            "deg": 150.0,
+            "gust": 0.0
+        }
+    }
+}

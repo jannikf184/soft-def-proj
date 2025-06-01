@@ -27,6 +27,7 @@ def generate_metrics():
     for city in cities:
         lat = city["lat"]
         lon = city["lon"]
+        city_name = city["name"]
         try:
             entries = []
             for k in range(0, 1):
@@ -34,21 +35,33 @@ def generate_metrics():
                 entries.extend(hourly_data)
 
             entries.sort(key=lambda x: x["dt"])
+            latest = entries[-1]
 
-            for entry in entries:
-                timestamp = entry["dt"]
-                hour = time.strftime("%Y-%m-%dT%H:00:00Z", time.gmtime(timestamp))
-                main = entry["main"]
-                wind = entry.get("wind", {})
-                city_label = f'city="{city}",hour="{hour}"'
-                metrics += (
-                    f'weather_temperature{{{city_label}}} {main["temp"]}\n'
-                    f'weather_wind_speed{{{city_label}}} {wind.get("speed", 0)}\n'
-                    f'weather_wind_speed{{{city_label}}} {wind.get("deg", 0)}\n'
-                )
+            timestamp = latest["dt"]
+            hour = time.strftime("%Y-%m-%dT%H:00:00Z", time.gmtime(timestamp))
+            main = latest.get("main", {})
+            wind = latest.get("wind", {})
+            clouds = latest.get("clouds", {})
+            weather = latest.get("weather", [{}])[0]  # 1. Eintrag aus Liste
+
+            label = f'city="{city_name}",hour="{hour}"'
+
+            metrics += (
+                f'weather_temperature{{{label}}} {main.get("temp", 0)}\n'
+                f'weather_feels_like{{{label}}} {main.get("feels_like", 0)}\n'
+                f'weather_pressure{{{label}}} {main.get("pressure", 0)}\n'
+                f'weather_humidity{{{label}}} {main.get("humidity", 0)}\n'
+                f'weather_temp_min{{{label}}} {main.get("temp_min", 0)}\n'
+                f'weather_temp_max{{{label}}} {main.get("temp_max", 0)}\n'
+                f'weather_wind_speed{{{label}}} {wind.get("speed", 0)}\n'
+                f'weather_wind_deg{{{label}}} {wind.get("deg", 0)}\n'
+                f'weather_wind_gust{{{label}}} {wind.get("gust", 0)}\n'
+                f'weather_clouds{{{label}}} {clouds.get("all", 0)}\n'
+                f'weather_condition_id{{{label},main="{weather.get("main", "")}",desc="{weather.get("description", "")}"}} {weather.get("id", 0)}\n'
+            )
 
         except Exception as e:
-            metrics += f"# ERROR fetching data for {city}: {e}\n"
+            metrics += f"# ERROR fetching data for {city_name}: {e}\n"
 
     return metrics
 
