@@ -24,8 +24,8 @@ FORCE_OSM_REFRESH = False
 FAHRGESCHWINDIGKEIT_KMH_CONST = 150
 
 # Fahrzeug- und physikalische Konstanten
-CD_Q7 = 0.34
-A_Q7 = 2.8
+CD_Q7 = 0.34    #drag coefficient
+A_Q7 = 2.8      #fläche
 MASSE_Q7_KG = 2200
 C_R_Q7 = 0.01
 G_ACCEL = 9.81
@@ -237,34 +237,34 @@ def get_verbrauch_farbe(verbrauch_l_100km,
                         ref_verbrauch=12.0,
                         bester_verbrauch_ziel=8.0,
                         schlechtester_verbrauch_schwelle=17.2):
-    grau_rgb = (192, 192, 192);
-    gruen_ziel_rgb = (0, 100, 0);
-    rot_ziel_rgb = (139, 0, 0)
+    yellow_rgb = (254,221,0);
+    gruen_ziel_rgb = (8,255,8);
+    rot_ziel_rgb = (225,6,0)
     if bester_verbrauch_ziel >= ref_verbrauch: bester_verbrauch_ziel = ref_verbrauch - 0.1
     if schlechtester_verbrauch_schwelle <= ref_verbrauch: schlechtester_verbrauch_schwelle = ref_verbrauch + 0.1
-    r, g, b = grau_rgb
+    r, g, b = yellow_rgb
     if verbrauch_l_100km <= bester_verbrauch_ziel:
         r, g, b = gruen_ziel_rgb
     elif verbrauch_l_100km >= schlechtester_verbrauch_schwelle:
         r, g, b = rot_ziel_rgb
     elif verbrauch_l_100km < ref_verbrauch:
         if ref_verbrauch == bester_verbrauch_ziel:
-            r, g, b = gruen_ziel_rgb if verbrauch_l_100km <= ref_verbrauch else grau_rgb
+            r, g, b = gruen_ziel_rgb if verbrauch_l_100km <= ref_verbrauch else yellow_rgb
         else:
             faktor = (ref_verbrauch - verbrauch_l_100km) / (ref_verbrauch - bester_verbrauch_ziel)
             faktor = max(0, min(1, faktor))
-            r = int(grau_rgb[0] * (1 - faktor) + gruen_ziel_rgb[0] * faktor)
-            g = int(grau_rgb[1] * (1 - faktor) + gruen_ziel_rgb[1] * faktor)
-            b = int(grau_rgb[2] * (1 - faktor) + gruen_ziel_rgb[2] * faktor)
+            r = int(yellow_rgb[0] * (1 - faktor) + gruen_ziel_rgb[0] * faktor)
+            g = int(yellow_rgb[1] * (1 - faktor) + gruen_ziel_rgb[1] * faktor)
+            b = int(yellow_rgb[2] * (1 - faktor) + gruen_ziel_rgb[2] * faktor)
     elif verbrauch_l_100km > ref_verbrauch:
         if schlechtester_verbrauch_schwelle == ref_verbrauch:
-            r, g, b = rot_ziel_rgb if verbrauch_l_100km >= ref_verbrauch else grau_rgb
+            r, g, b = rot_ziel_rgb if verbrauch_l_100km >= ref_verbrauch else yellow_rgb
         else:
             faktor = (verbrauch_l_100km - ref_verbrauch) / (schlechtester_verbrauch_schwelle - ref_verbrauch)
             faktor = max(0, min(1, faktor))
-            r = int(grau_rgb[0] * (1 - faktor) + rot_ziel_rgb[0] * faktor)
-            g = int(grau_rgb[1] * (1 - faktor) + rot_ziel_rgb[1] * faktor)
-            b = int(grau_rgb[2] * (1 - faktor) + rot_ziel_rgb[2] * faktor)
+            r = int(yellow_rgb[0] * (1 - faktor) + rot_ziel_rgb[0] * faktor)
+            g = int(yellow_rgb[1] * (1 - faktor) + rot_ziel_rgb[1] * faktor)
+            b = int(yellow_rgb[2] * (1 - faktor) + rot_ziel_rgb[2] * faktor)
     r = max(0, min(255, r));
     g = max(0, min(255, g));
     b = max(0, min(255, b))
