@@ -5,7 +5,9 @@ import math
 import os
 import folium
 from keys import load_API_KEY
-
+"""
+ist hier auch alles kaputti kaputti kaputt?
+"""
 try:
     from shapely.geometry import Point, LineString
 except ImportError:
