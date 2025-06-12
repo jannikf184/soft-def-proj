@@ -185,11 +185,22 @@ def get_osm_autobahn_geometry_by_ref(autobahn_ref_tag):
         return None
 
 
-# --- DEINE FUNKTIONEN ---
+
 def calc_airspeed_against_car(wind_speed_kmh=0, wind_direction_deg=0, car_direction_deg=0):
+    """
+    Die Funktion nimmt Windgeschwindigkeit, Windrichtung und projeziert den Anteil des Windes,
+    der mit oder gegen die Fahrtrichtung "arbeitet"
+    :param wind_speed_kmh: Windgeschwindigkeit in kmh
+    :param wind_direction_deg: ""
+    :param car_direction_deg: ""
+    :return:
+    Die relative Windgeschwindigkeit auf das Auto
+    z.B: 150 km/h (Auto) + 10 km/h (Gegenwind) = 160km/h
+    """
     relative_direction = car_direction_deg - wind_direction_deg
     v_rel_kmh = math.cos(math.radians(relative_direction)) * wind_speed_kmh
     return FAHRGESCHWINDIGKEIT_KMH_CONST + v_rel_kmh
+
 
 
 def normiere_verbrauch(v, v_min=8, v_max=22):
