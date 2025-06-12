@@ -6,7 +6,8 @@ app = Flask(__name__)
 
 def refresh_maps():
     """
-    hallo ich bin finn
+    Erstellt die Verbrauchskarte neu mit den aktuell abgerufenen Wetterdaten
+    :return: 2 Html Files für Hin und Gegenrichtung
     """
     erstelle_karte(original_autobahn_abschnitte_definition, "originalrichtung", ist_gegenrichtung_flag=False)
     erstelle_karte(gegenrichtung_definition, "gegenrichtung_option1", ist_gegenrichtung_flag=True)
